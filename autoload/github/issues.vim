@@ -157,7 +157,6 @@ function! s:UI.initialize(path)
     throw 'github: issues: Require the repository name.'
   endif
 
-  let path = pathinfo.path
   let self.path = split(pathinfo.path, '/')
   let self.type =
   \   get(self.path, -1, '') =~# '^\%(edit\|new\)$' ? 'edit' : 'view'
